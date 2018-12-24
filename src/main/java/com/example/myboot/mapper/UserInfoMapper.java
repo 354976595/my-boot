@@ -3,6 +3,8 @@ package com.example.myboot.mapper;
 import com.example.myboot.model.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface UserInfoMapper {
     /**
@@ -52,4 +54,6 @@ public interface UserInfoMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(UserInfo record);
+
+    List<UserInfo> selectAll();
 }

@@ -5,5 +5,8 @@ import com.example.myboot.model.UserInfo;
 import java.util.List;
 
 public interface UserService {
-    UserInfo getAll(Integer integer);
+    UserInfo getByPrimaryKey(Integer integer);
+    int updateByPrimaryKey(UserInfo userInfo);
+
+    List<UserInfo> getAll();
 }
