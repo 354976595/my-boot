@@ -13,7 +13,7 @@ import javax.jms.*;
 import java.util.List;
 
 @RestController
-public class ActivemqController {
+public class ActivemqSenderController {
     @Autowired
     private JmsTemplate jmsTemplate;
     @Autowired
@@ -31,6 +31,6 @@ public class ActivemqController {
             System.out.println(value);
             return message;
         });
-        return "12312312";
+        return "sendMessage";
     }
 }
