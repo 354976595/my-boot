@@ -27,6 +27,10 @@
     from userinfo
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectAll" resultType="com.example.myboot.model.UserInfo" resultMap="BaseResultMap">
+    select *
+    from userinfo;
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     <!--
       WARNING - @mbggenerated
