@@ -25,7 +25,7 @@ Logger logger= LoggerFactory.getLogger(ControllerAspect.class);
      * @param user 切入点的参数1 可以没有args
      * @param sv 切入点的参数2 可以没有args
      */
-    @Pointcut(value = "execution(public * com.example.myboot.controller.*.*(..))&&args(user,sv)")
+    @Pointcut(value = "execution(public * com.example.myboot.controller.*.*(..))&&(args(user,sv,..)||args(sv,user,..)||args(sv,..,user)||args(..,sv,user))")
     public void logs(UserInfo user,Object sv){
 
     }

@@ -14,7 +14,7 @@ public class HelloWordController {
     @Autowired
     private UserService userService;
     @RequestMapping("/hello")
-    public String hello(UserInfo userInfo,Object sv){
+    public String hello(Object test,Object ws,UserInfo userInfo){
         List<UserInfo> res=null;
         try {
             res = userService.getAll();
